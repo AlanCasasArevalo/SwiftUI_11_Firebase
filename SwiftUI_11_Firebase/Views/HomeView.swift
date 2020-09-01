@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct HomeView: View {
     
@@ -21,6 +22,23 @@ struct HomeView: View {
                     }
                 }
             }.navigationBarTitle("Inicio")
+                .navigationBarItems(leading: Button(action: {
+                    self.loggout()
+                }, label: {
+                    Text("Salir")
+                }))
+        }
+    }
+}
+
+extension HomeView {
+    private func loggout () {
+        do {
+            try Auth.auth().signOut()
+            self.isLogged = false
+            UserDefaults.standard.set(self.isLogged, forKey: "isLogged")
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }
