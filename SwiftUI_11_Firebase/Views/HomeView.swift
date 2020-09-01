@@ -15,7 +15,9 @@ struct HomeView: View {
             ZStack {
                 List {
                     ForEach(self.posts.posts) { item in
-                        CardView(post: item)
+                        NavigationLink (destination: EditView(post: item)) {                            
+                            CardView(post: item)
+                        }
                     }
                     .onDelete { (index) in
                         self.deletePost(index: index)

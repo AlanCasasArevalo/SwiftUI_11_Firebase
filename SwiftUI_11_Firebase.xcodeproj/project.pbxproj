@@ -21,6 +21,7 @@
 		5172B1AB24FE47AB004BE76C /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172B1AA24FE47AB004BE76C /* PostModel.swift */; };
 		51BB30C524FE4DE3007F924D /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB30C424FE4DE3007F924D /* PostsModel.swift */; };
 		51BB30C724FE5304007F924D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB30C624FE5304007F924D /* CardView.swift */; };
+		51BB30C924FE5CC6007F924D /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB30C824FE5CC6007F924D /* EditView.swift */; };
 		B6D0417CEBF36210E65E2A27 /* Pods_SwiftUI_11_Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9F736037D7A7DAD7CADEF9 /* Pods_SwiftUI_11_Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		5172B1AA24FE47AB004BE76C /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		51BB30C424FE4DE3007F924D /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
 		51BB30C624FE5304007F924D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		51BB30C824FE5CC6007F924D /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				5172B1A224FE34DE004BE76C /* HomeView.swift */,
 				5172B1A424FE34ED004BE76C /* LoginFormView.swift */,
+				51BB30C824FE5CC6007F924D /* EditView.swift */,
 				5172B1A624FE3EB3004BE76C /* PostNewView.swift */,
 			);
 			path = Views;
@@ -265,6 +268,7 @@
 			files = (
 				5172B18624FE2CBD004BE76C /* AppDelegate.swift in Sources */,
 				5172B1AB24FE47AB004BE76C /* PostModel.swift in Sources */,
+				51BB30C924FE5CC6007F924D /* EditView.swift in Sources */,
 				51BB30C524FE4DE3007F924D /* PostsModel.swift in Sources */,
 				5172B1A324FE34DE004BE76C /* HomeView.swift in Sources */,
 				51BB30C724FE5304007F924D /* CardView.swift in Sources */,

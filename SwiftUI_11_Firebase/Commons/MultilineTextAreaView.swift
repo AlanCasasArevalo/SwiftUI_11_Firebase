@@ -13,7 +13,7 @@ struct MultilineTextAreaView: UIViewRepresentable {
         let text = UITextView()
         text.isEditable = true
         text.isUserInteractionEnabled = true
-        text.text = "Escribe algo ...."
+        text.text = self.text.isEmpty ? "Escribe algo ...." : self.text
         text.textColor = .gray
         text.font = .systemFont(ofSize: 15)
         text.delegate = context.coordinator
