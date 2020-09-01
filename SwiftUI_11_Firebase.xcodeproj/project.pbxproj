@@ -23,6 +23,8 @@
 		51BB30C724FE5304007F924D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB30C624FE5304007F924D /* CardView.swift */; };
 		51BB30C924FE5CC6007F924D /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB30C824FE5CC6007F924D /* EditView.swift */; };
 		51BB30CB24FE672B007F924D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB30CA24FE672B007F924D /* ImagePicker.swift */; };
+		51BB30CD24FE6EAA007F924D /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB30CC24FE6EAA007F924D /* Loader.swift */; };
+		51BB30CF24FE6FC0007F924D /* FirebaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BB30CE24FE6FC0007F924D /* FirebaseImage.swift */; };
 		B6D0417CEBF36210E65E2A27 /* Pods_SwiftUI_11_Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9F736037D7A7DAD7CADEF9 /* Pods_SwiftUI_11_Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		51BB30C624FE5304007F924D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		51BB30C824FE5CC6007F924D /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		51BB30CA24FE672B007F924D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		51BB30CC24FE6EAA007F924D /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		51BB30CE24FE6FC0007F924D /* FirebaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,8 @@
 				5172B1A824FE44DD004BE76C /* MultilineTextAreaView.swift */,
 				51BB30C624FE5304007F924D /* CardView.swift */,
 				51BB30CA24FE672B007F924D /* ImagePicker.swift */,
+				51BB30CE24FE6FC0007F924D /* FirebaseImage.swift */,
+				51BB30CC24FE6EAA007F924D /* Loader.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51BB30CF24FE6FC0007F924D /* FirebaseImage.swift in Sources */,
 				5172B18624FE2CBD004BE76C /* AppDelegate.swift in Sources */,
 				5172B1AB24FE47AB004BE76C /* PostModel.swift in Sources */,
 				51BB30C924FE5CC6007F924D /* EditView.swift in Sources */,
@@ -278,6 +285,7 @@
 				5172B1A924FE44DD004BE76C /* MultilineTextAreaView.swift in Sources */,
 				5172B1A524FE34ED004BE76C /* LoginFormView.swift in Sources */,
 				5172B1A724FE3EB3004BE76C /* PostNewView.swift in Sources */,
+				51BB30CD24FE6EAA007F924D /* Loader.swift in Sources */,
 				51BB30CB24FE672B007F924D /* ImagePicker.swift in Sources */,
 				5172B18824FE2CBD004BE76C /* SceneDelegate.swift in Sources */,
 				5172B18A24FE2CBD004BE76C /* ContentView.swift in Sources */,

@@ -39,7 +39,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             let image = info[.originalImage] as! UIImage
-            guard let data = image.jpegData(compressionQuality: 0.7) else { return }
+            guard let data = image.jpegData(compressionQuality: 0.05) else { return }
             self.conection.image = data
             self.conection.show.toggle()
         }

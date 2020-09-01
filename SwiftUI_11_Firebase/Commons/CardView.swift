@@ -9,13 +9,7 @@ struct CardView: View {
     var body: some View {
         VStack (alignment: .leading) {
             HStack (alignment: .top) {
-                Image(systemName: "person.fill")
-                    .font(.largeTitle)
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(Color(.cyan))
-                    .background(Color(.systemGray5))
-                    .cornerRadius(25)
-                
+                FirebaseImage(imageUrl: post.image)
                 VStack (alignment: .leading) {
                     Text(post.email)
                         .font(.system(.caption, design: .rounded))

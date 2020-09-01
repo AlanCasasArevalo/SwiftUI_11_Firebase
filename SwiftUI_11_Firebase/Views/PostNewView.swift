@@ -34,7 +34,6 @@ struct PostNewView: View {
                     }
                     Button(action: {
                         self.saveNewPost()
-                        self.showModal.toggle()
                     }) {
                         Text("Publicar")
                     }
@@ -90,6 +89,7 @@ extension PostNewView {
                 print(error?.localizedDescription ?? "")
             } else {
                 print("***** Se ha guardado correctamente la imagen *****")
+                self.showModal.toggle()
             }
         }
         
