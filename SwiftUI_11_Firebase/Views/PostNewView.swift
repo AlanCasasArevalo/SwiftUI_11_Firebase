@@ -5,6 +5,8 @@ import SwiftUI
 struct PostNewView: View {
     
     @Binding var showModal: Bool
+    @State private var title = ""
+    @State private var resume = ""
     
     var body: some View {
         NavigationView {
@@ -21,6 +23,8 @@ struct PostNewView: View {
                         Text("Publicar")
                     }
                 }
+                TextField("Title", text: self.$title)
+                MultilineTextAreaView(text: self.$resume)
             }
         }
     }
