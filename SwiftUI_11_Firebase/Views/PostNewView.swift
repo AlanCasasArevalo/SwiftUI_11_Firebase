@@ -96,7 +96,7 @@ extension PostNewView {
         // Guarda Texto
         let db = Firestore.firestore()
         
-        db.collection("Posts").addDocument(data: createFields()) { (error) in
+        db.collection("Posts").addDocument(data: createFields(folder: folder)) { (error) in
             if error != nil {
                 print(error?.localizedDescription ?? "")
             } else {
@@ -105,11 +105,12 @@ extension PostNewView {
         }
     }
     
-    private func createFields () -> [String: Any] {
+    private func createFields (folder: StorageReference) -> [String: Any] {
         let fields: [String: Any] = [
             "Title": self.title,
             "Text": self.resume,
             "Email": getCurrentUserEmail(),
+            "Image": String(describing: folder)
         ]
         return fields
     }
