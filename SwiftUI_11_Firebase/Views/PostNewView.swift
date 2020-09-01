@@ -1,13 +1,15 @@
 
 
 import SwiftUI
+import FirebaseFirestore
+import FirebaseAuth
 
 struct PostNewView: View {
     
     @Binding var showModal: Bool
     @State private var title = ""
     @State private var resume = ""
-    
+        
     var body: some View {
         NavigationView {
             VStack {
@@ -18,7 +20,8 @@ struct PostNewView: View {
                         Text("Cancelar")
                     }
                     Button(action: {
-                        print("Publicar")
+                        self.saveNewPost()
+                        self.showModal.toggle()
                     }) {
                         Text("Publicar")
                     }
@@ -28,6 +31,35 @@ struct PostNewView: View {
             }
         }
     }
+}
+
+extension PostNewView {
+    private func saveNewPost () {
+        let db = Firestore.firestore()
+        
+        db.collection("Posts").addDocument(data: createFields()) { (error) in
+            if error != nil {
+                print(error?.localizedDescription)
+            } else {
+                print("***** Se ha guardado todo bien *****")
+            }
+        }
+    }
+    
+    private func createFields () -> [String: Any] {
+        let fields: [String: Any] = [
+            "Title": self.title,
+            "Text": self.resume,
+            "Email": getCurrentUserEmail(),
+        ]
+        return fields
+    }
+    
+    private func getCurrentUserEmail () -> String {
+        let email = Auth.auth().currentUser?.email ?? ""
+        return email
+    }
+        
 }
 
 struct PostNewView_Previews: PreviewProvider {
