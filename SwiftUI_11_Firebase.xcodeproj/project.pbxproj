@@ -16,6 +16,7 @@
 		5172B1A124FE347E004BE76C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5172B1A024FE347E004BE76C /* GoogleService-Info.plist */; };
 		5172B1A324FE34DE004BE76C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172B1A224FE34DE004BE76C /* HomeView.swift */; };
 		5172B1A524FE34ED004BE76C /* LoginFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172B1A424FE34ED004BE76C /* LoginFormView.swift */; };
+		5172B1A724FE3EB3004BE76C /* PostNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172B1A624FE3EB3004BE76C /* PostNewView.swift */; };
 		B6D0417CEBF36210E65E2A27 /* Pods_SwiftUI_11_Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9F736037D7A7DAD7CADEF9 /* Pods_SwiftUI_11_Firebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		5172B1A024FE347E004BE76C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5172B1A224FE34DE004BE76C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5172B1A424FE34ED004BE76C /* LoginFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormView.swift; sourceTree = "<group>"; };
+		5172B1A624FE3EB3004BE76C /* PostNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				5172B1A224FE34DE004BE76C /* HomeView.swift */,
 				5172B1A424FE34ED004BE76C /* LoginFormView.swift */,
+				5172B1A624FE3EB3004BE76C /* PostNewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				5172B18624FE2CBD004BE76C /* AppDelegate.swift in Sources */,
 				5172B1A324FE34DE004BE76C /* HomeView.swift in Sources */,
 				5172B1A524FE34ED004BE76C /* LoginFormView.swift in Sources */,
+				5172B1A724FE3EB3004BE76C /* PostNewView.swift in Sources */,
 				5172B18824FE2CBD004BE76C /* SceneDelegate.swift in Sources */,
 				5172B18A24FE2CBD004BE76C /* ContentView.swift in Sources */,
 			);
