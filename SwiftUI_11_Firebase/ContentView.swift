@@ -9,8 +9,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isLogged = false
+    
     var body: some View {
-        Text("Hello, World!")
+        return Group {
+            if isLogged {
+                HomeView()
+            } else {
+                LoginFormView()
+            }
+        }
     }
 }
 
