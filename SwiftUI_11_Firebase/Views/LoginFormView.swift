@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct LoginFormView: View {
     
@@ -30,12 +31,29 @@ struct LoginFormView: View {
             }.padding()
             VStack (alignment: .center, spacing: 20) {
                 Button(action: {
-                    
+                    Auth.auth().signIn(withEmail: self.email, password: self.password) { (user, error) in
+                        if error != nil {
+                            print(error)
+                        } else if user != nil {
+                            print("************* Usuario Logado *************")
+                            self.isLogged.toggle()
+                        } else {
+                            print("Algo ha salido mal")
+                        }
+                    }
                 }) {
                     Text("Entrar")
                 }
                 Button(action: {
-                    
+                    Auth.auth().createUser(withEmail: self.email, password: self.password) { (user, error) in
+                        if error != nil {
+                            print(error)
+                        } else if user != nil {
+                            print("************* Usuario Registrado *************")
+                        } else {
+                            print("Algo ha salido mal")
+                        }
+                    }
                 }) {
                     Text("Registrar")
                 }
