@@ -6,4 +6,5 @@ struct PostModel: Identifiable {
     var title: String
     var resume: String
     var email: String
+    var image: String
 }

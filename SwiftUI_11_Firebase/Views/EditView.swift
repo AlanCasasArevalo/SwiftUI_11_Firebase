@@ -22,10 +22,14 @@ struct EditView: View {
             }) {
                 Text("Editar")
             }
-        }.onAppear {
+            Spacer()
+        }
+        .padding(24)
+        .onAppear {
             self.title = self.post.title
             self.resume = self.post.resume
         }
+        
     }
 }
 
@@ -37,7 +41,7 @@ extension EditView {
         
         db.collection("Posts").document(id).updateData(createFields()) { (error) in
             if error != nil {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "")
             } else {
                 print("Se edito correctamente")
                 self.back.wrappedValue.dismiss()
@@ -62,6 +66,6 @@ extension EditView {
 
 struct EditView_Previews: PreviewProvider {
     static var previews: some View {
-        EditView(post: .init(id: "1", title: "Menorca", resume: "Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin,  Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin", email: "hhh@hh.com"))
+        EditView(post: .init(id: "1", title: "Menorca", resume: "Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin,  Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin", email: "hhh@hh.com", image: ""))
     }
 }

@@ -27,7 +27,7 @@ struct LoginFormView: View {
                 Button(action: {
                     Auth.auth().signIn(withEmail: self.email, password: self.password) { (user, error) in
                         if error != nil {
-                            print(error)
+                            print(error ?? "")
                         } else if user != nil {
                             print("************* Usuario Logado *************")
                             self.isLogged = true
@@ -43,7 +43,7 @@ struct LoginFormView: View {
                 Button(action: {
                     Auth.auth().createUser(withEmail: self.email, password: self.password) { (user, error) in
                         if error != nil {
-                            print(error)
+                            print(error ?? "")
                         } else if user != nil {
                             print("************* Usuario Registrado *************")
                         } else {

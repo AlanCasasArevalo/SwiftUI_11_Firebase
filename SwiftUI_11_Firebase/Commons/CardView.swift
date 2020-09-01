@@ -33,6 +33,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(post: .init(id: "1", title: "Menorca", resume: "Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin,  Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin", email: "hhh@hh.com"))
+        CardView(post: .init(id: "1", title: "Menorca", resume: "Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin,  Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin, Aqui de relax en menorca de vacaciones por fin", email: "hhh@hh.com", image: ""))
     }
 }
