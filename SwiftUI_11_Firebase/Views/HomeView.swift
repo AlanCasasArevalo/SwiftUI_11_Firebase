@@ -1,6 +1,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 struct HomeView: View {
     
@@ -15,6 +16,9 @@ struct HomeView: View {
                 List {
                     ForEach(self.posts.posts) { item in
                         CardView(post: item)
+                    }
+                    .onDelete { (index) in
+                        self.deletePost(index: index)
                     }
                 }
                 VStack {
@@ -57,6 +61,15 @@ extension HomeView {
         } catch let error {
             print(error.localizedDescription)
         }
+    }
+}
+
+extension HomeView {
+    private func deletePost (index: IndexSet) {
+        let id = self.posts.posts[index.first ?? 0].id
+        let db = Firestore.firestore()
+        db.collection("Posts").document(id).delete()
+        self.posts.posts.remove(atOffsets: index)
     }
 }
 
