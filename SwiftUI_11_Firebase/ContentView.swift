@@ -15,9 +15,13 @@ struct ContentView: View {
     var body: some View {
         return Group {
             if isLogged {
-                HomeView()
+                HomeView(isLogged: self.$isLogged)
             } else {
                 LoginFormView(isLogged: self.$isLogged)
+            }
+        }.onAppear{
+            if UserDefaults.standard.bool(forKey: "isLogged") {
+                self.isLogged = UserDefaults.standard.bool(forKey: "isLogged")
             }
         }
     }

@@ -36,7 +36,9 @@ struct LoginFormView: View {
                             print(error)
                         } else if user != nil {
                             print("************* Usuario Logado *************")
-                            self.isLogged.toggle()
+                            self.isLogged = true
+                            
+                            UserDefaults.standard.set(self.isLogged, forKey: "isLogged")
                         } else {
                             print("Algo ha salido mal")
                         }

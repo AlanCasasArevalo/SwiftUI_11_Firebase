@@ -9,13 +9,24 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @Binding var isLogged: Bool
+    
     var body: some View {
-        Text("Hello, HomeView")
+        NavigationView{
+            ZStack {
+                List {
+                    ForEach(1..<10) { item in
+                        Text("Post \(item)")
+                    }
+                }
+            }.navigationBarTitle("Inicio")
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(isLogged: .constant(false))
     }
 }
