@@ -27,7 +27,7 @@ struct HomeView: View {
                     HStack {
                         Spacer()
                         Button(action: {
-                            
+                            self.showModal.toggle()
                         }) {
                             Image(systemName: "plus")
                                 .font(.system(.title, design: .rounded))

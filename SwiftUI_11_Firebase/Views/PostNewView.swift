@@ -17,7 +17,7 @@ struct PostNewView: View {
             VStack {
                 HStack (alignment: .center, spacing: 40) {
                     Button(action: {
-                        self.showModal = false
+                        self.showModal.toggle()
                     }) {
                         Text("Cancelar")
                     }
