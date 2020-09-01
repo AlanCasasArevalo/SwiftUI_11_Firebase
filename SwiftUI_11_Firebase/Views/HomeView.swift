@@ -7,12 +7,14 @@ struct HomeView: View {
     @Binding var isLogged: Bool
     @State var showModal: Bool = false
     
+    @ObservedObject var posts = PostsModel()
+    
     var body: some View {
         NavigationView{
             ZStack {
                 List {
-                    ForEach(1..<10) { item in
-                        Text("Post \(item)")
+                    ForEach(self.posts.posts) { item in
+                        CardView(post: item)
                     }
                 }
                 VStack {
