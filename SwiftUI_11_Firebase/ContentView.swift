@@ -17,7 +17,7 @@ struct ContentView: View {
             if isLogged {
                 HomeView()
             } else {
-                LoginFormView()
+                LoginFormView(isLogged: self.$isLogged)
             }
         }
     }

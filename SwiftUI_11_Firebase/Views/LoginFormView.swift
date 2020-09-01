@@ -9,13 +9,43 @@
 import SwiftUI
 
 struct LoginFormView: View {
+    
+    @State private var email = ""
+    @State private var password = ""
+    @Binding var isLogged: Bool
+    
     var body: some View {
-        Text("Hello, LoginFormView")
+        VStack {
+            Text("Inicio de Session")
+                .font(.system(.title, design: .rounded))
+                .bold()
+                .foregroundColor(Color(.cyan))
+            VStack{
+                TextField("Email", text: self.$email)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.emailAddress)
+                    .autocapitalization(.none)
+                SecureField("Password", text: self.$password)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+            }.padding()
+            VStack (alignment: .center, spacing: 20) {
+                Button(action: {
+                    
+                }) {
+                    Text("Entrar")
+                }
+                Button(action: {
+                    
+                }) {
+                    Text("Registrar")
+                }
+            }
+        }
     }
 }
 
 struct LoginFormView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginFormView()
+        LoginFormView(isLogged: .constant(false))
     }
 }
